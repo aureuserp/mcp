@@ -3,7 +3,9 @@
 namespace Webkul\Mcp;
 
 use Filament\Panel;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Contracts\Debug\ExceptionHandler;
+use Illuminate\Http\Request;
 use Laravel\Passport\ClientRepository;
 use Laravel\Passport\Passport;
 use Webkul\Mcp\Console\Commands\DevMcpCommand;
@@ -54,10 +56,18 @@ class McpServiceProvider extends PackageServiceProvider
             });
         }
 
-        // Passport's OAuth authorize flow requires a named 'login' route to redirect
-        // unauthenticated users. Register a fallback only when no other provider defines it.
-        if (! Route::has('login')) {
-            Route::redirect('/login', '/admin/login')->name('login');
+        // Intercept unauthenticated access to any OAuth route and send users directly
+        // to the admin login page. A route-based redirect at /login is unreliable because
+        // other panels (e.g. customer panel) register their own /login route first and win
+        // route matching. Hooking the exception handler bypasses that entirely.
+        $handler = app(ExceptionHandler::class);
+
+        if (method_exists($handler, 'renderable')) {
+            $handler->renderable(function (AuthenticationException $e, Request $request) {
+                if (! $request->expectsJson() && $request->is('oauth/*')) {
+                    return redirect()->guest(url('/admin/login'));
+                }
+            });
         }
     }
 }
