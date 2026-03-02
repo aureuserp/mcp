@@ -1,6 +1,6 @@
-# AureusERP MCP Plugin (`aureuserp/mcp`)
+# AureusERP MCP Plugin
 
-`aureuserp/mcp` adds MCP servers to AureusERP so AI clients (MCP Inspector, coding agents, ERP assistants) can use ERP tools securely.
+This plugin adds MCP servers to AureusERP so AI clients (MCP Inspector, coding agents, ERP assistants) can use ERP tools securely.
 
 ## What this plugin provides
 
