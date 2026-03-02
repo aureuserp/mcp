@@ -209,9 +209,9 @@ trait HasQueryHelpers
 
         if (! class_exists($modelClass)) {
             return array_map(fn (array $row): array => [
-                'id'    => is_numeric($row['key']) ? (int) $row['key'] : null,
-                'label' => (string) $row['key'],
-                'total' => $row['total'],
+                'id'    => isset($row['key']) && is_numeric($row['key']) ? (int) $row['key'] : null,
+                'label' => (string) ($row['key'] ?? ''),
+                'total' => $row['total'] ?? 0,
             ], $rows);
         }
 
@@ -236,12 +236,13 @@ trait HasQueryHelpers
         }
 
         return array_map(function (array $row) use ($labels): array {
-            $id = is_numeric($row['key']) ? (int) $row['key'] : null;
+            $key = $row['key'] ?? null;
+            $id  = isset($key) && is_numeric($key) ? (int) $key : null;
 
             return [
                 'id'    => $id,
-                'label' => ($id !== null && isset($labels[$id])) ? (string) $labels[$id] : (string) $row['key'],
-                'total' => $row['total'],
+                'label' => ($id !== null && isset($labels[$id])) ? (string) $labels[$id] : (string) ($key ?? ''),
+                'total' => $row['total'] ?? 0,
             ];
         }, $rows);
     }
