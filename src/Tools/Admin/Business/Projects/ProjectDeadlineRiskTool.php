@@ -14,4 +14,9 @@ class ProjectDeadlineRiskTool extends BusinessMetricTool
     {
         return 'project_deadline_risk';
     }
+
+    protected function pluginName(): string
+    {
+        return 'projects';
+    }
 }

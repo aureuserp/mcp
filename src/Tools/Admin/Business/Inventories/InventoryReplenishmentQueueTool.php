@@ -14,4 +14,9 @@ class InventoryReplenishmentQueueTool extends BusinessMetricTool
     {
         return 'inventory_replenishment_queue';
     }
+
+    protected function pluginName(): string
+    {
+        return 'inventories';
+    }
 }

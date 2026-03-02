@@ -14,4 +14,9 @@ class PurchaseSpendSummaryTool extends BusinessMetricTool
     {
         return 'purchase_spend_summary';
     }
+
+    protected function pluginName(): string
+    {
+        return 'purchases';
+    }
 }

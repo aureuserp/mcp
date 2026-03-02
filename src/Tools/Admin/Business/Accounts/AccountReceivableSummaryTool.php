@@ -14,4 +14,9 @@ class AccountReceivableSummaryTool extends BusinessMetricTool
     {
         return 'account_receivable_summary';
     }
+
+    protected function pluginName(): string
+    {
+        return 'accounts';
+    }
 }

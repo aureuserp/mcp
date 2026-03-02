@@ -37,7 +37,7 @@ OAuth discovery + registration endpoints are also exposed (via `Mcp::oauthRoutes
 - Laravel `^11`
 - Filament `^4`
 - `laravel/mcp` `^0.5`
-- `laravel/passport` `^12`
+- `laravel/passport` `^13`
 - AureusERP plugin manager
 
 ## Install

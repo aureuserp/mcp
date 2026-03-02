@@ -14,4 +14,9 @@ class SalesOrderFulfillmentStatusTool extends BusinessMetricTool
     {
         return 'sales_order_fulfillment_status';
     }
+
+    protected function pluginName(): string
+    {
+        return 'sales';
+    }
 }

@@ -14,4 +14,9 @@ class InvoiceOverdueSummaryTool extends BusinessMetricTool
     {
         return 'invoice_overdue_summary';
     }
+
+    protected function pluginName(): string
+    {
+        return 'invoices';
+    }
 }

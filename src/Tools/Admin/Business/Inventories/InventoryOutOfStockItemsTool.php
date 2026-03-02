@@ -14,4 +14,9 @@ class InventoryOutOfStockItemsTool extends BusinessMetricTool
     {
         return 'inventory_out_of_stock_items';
     }
+
+    protected function pluginName(): string
+    {
+        return 'inventories';
+    }
 }

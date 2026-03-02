@@ -14,4 +14,9 @@ class InventoryLowStockAlertsTool extends BusinessMetricTool
     {
         return 'inventory_low_stock_alerts';
     }
+
+    protected function pluginName(): string
+    {
+        return 'inventories';
+    }
 }

@@ -14,4 +14,9 @@ class InvoicePaymentFollowupsTool extends BusinessMetricTool
     {
         return 'invoice_payment_followups';
     }
+
+    protected function pluginName(): string
+    {
+        return 'invoices';
+    }
 }

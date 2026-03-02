@@ -14,4 +14,9 @@ class AccountingJournalEntryHealthTool extends BusinessMetricTool
     {
         return 'accounting_journal_entry_health';
     }
+
+    protected function pluginName(): string
+    {
+        return 'accounts';
+    }
 }

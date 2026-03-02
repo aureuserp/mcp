@@ -14,4 +14,9 @@ class SalesPipelineSummaryTool extends BusinessMetricTool
     {
         return 'sales_pipeline_summary';
     }
+
+    protected function pluginName(): string
+    {
+        return 'sales';
+    }
 }

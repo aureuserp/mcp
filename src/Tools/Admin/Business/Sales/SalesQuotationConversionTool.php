@@ -14,4 +14,9 @@ class SalesQuotationConversionTool extends BusinessMetricTool
     {
         return 'sales_quotation_conversion';
     }
+
+    protected function pluginName(): string
+    {
+        return 'sales';
+    }
 }

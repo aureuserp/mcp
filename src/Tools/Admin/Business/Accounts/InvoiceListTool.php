@@ -14,4 +14,9 @@ class InvoiceListTool extends BusinessMetricTool
     {
         return 'invoice_list';
     }
+
+    protected function pluginName(): string
+    {
+        return 'invoices';
+    }
 }

@@ -14,4 +14,9 @@ class AccountingCashflowSnapshotTool extends BusinessMetricTool
     {
         return 'accounting_cashflow_snapshot';
     }
+
+    protected function pluginName(): string
+    {
+        return 'accounts';
+    }
 }

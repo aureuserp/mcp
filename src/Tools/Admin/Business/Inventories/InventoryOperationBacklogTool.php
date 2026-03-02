@@ -14,4 +14,9 @@ class InventoryOperationBacklogTool extends BusinessMetricTool
     {
         return 'inventory_operation_backlog';
     }
+
+    protected function pluginName(): string
+    {
+        return 'inventories';
+    }
 }

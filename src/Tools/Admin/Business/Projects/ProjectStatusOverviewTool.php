@@ -14,4 +14,9 @@ class ProjectStatusOverviewTool extends BusinessMetricTool
     {
         return 'project_status_overview';
     }
+
+    protected function pluginName(): string
+    {
+        return 'projects';
+    }
 }

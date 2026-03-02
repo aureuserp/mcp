@@ -14,4 +14,9 @@ class ProjectTaskBacklogTool extends BusinessMetricTool
     {
         return 'project_task_backlog';
     }
+
+    protected function pluginName(): string
+    {
+        return 'projects';
+    }
 }

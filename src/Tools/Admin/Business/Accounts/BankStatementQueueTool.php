@@ -14,4 +14,9 @@ class BankStatementQueueTool extends BusinessMetricTool
     {
         return 'bank_statement_queue';
     }
+
+    protected function pluginName(): string
+    {
+        return 'accounts';
+    }
 }

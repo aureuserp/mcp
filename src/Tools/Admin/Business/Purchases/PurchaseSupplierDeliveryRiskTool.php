@@ -14,4 +14,9 @@ class PurchaseSupplierDeliveryRiskTool extends BusinessMetricTool
     {
         return 'purchase_supplier_delivery_risk';
     }
+
+    protected function pluginName(): string
+    {
+        return 'purchases';
+    }
 }

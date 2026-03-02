@@ -14,4 +14,9 @@ class AccountingTaxLiabilitySnapshotTool extends BusinessMetricTool
     {
         return 'accounting_tax_liability_snapshot';
     }
+
+    protected function pluginName(): string
+    {
+        return 'accounts';
+    }
 }

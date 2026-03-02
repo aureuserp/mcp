@@ -14,4 +14,9 @@ class InvoiceStatusBreakdownTool extends BusinessMetricTool
     {
         return 'invoice_status_breakdown';
     }
+
+    protected function pluginName(): string
+    {
+        return 'invoices';
+    }
 }

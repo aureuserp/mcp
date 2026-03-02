@@ -14,4 +14,9 @@ class AccountPaymentStateBreakdownTool extends BusinessMetricTool
     {
         return 'account_payment_state_breakdown';
     }
+
+    protected function pluginName(): string
+    {
+        return 'accounts';
+    }
 }

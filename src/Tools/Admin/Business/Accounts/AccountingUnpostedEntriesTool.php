@@ -14,4 +14,9 @@ class AccountingUnpostedEntriesTool extends BusinessMetricTool
     {
         return 'accounting_unposted_entries';
     }
+
+    protected function pluginName(): string
+    {
+        return 'accounts';
+    }
 }

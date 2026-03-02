@@ -14,4 +14,9 @@ class PurchaseOrdersPendingTool extends BusinessMetricTool
     {
         return 'purchase_orders_pending';
     }
+
+    protected function pluginName(): string
+    {
+        return 'purchases';
+    }
 }

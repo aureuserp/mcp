@@ -14,4 +14,9 @@ class InventoryLocationBalanceTool extends BusinessMetricTool
     {
         return 'inventory_location_balance';
     }
+
+    protected function pluginName(): string
+    {
+        return 'inventories';
+    }
 }

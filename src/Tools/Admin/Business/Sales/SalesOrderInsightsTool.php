@@ -34,4 +34,9 @@ class SalesOrderInsightsTool extends BusinessMetricTool
     {
         return 'sales_order_insights';
     }
+
+    protected function pluginName(): string
+    {
+        return 'sales';
+    }
 }

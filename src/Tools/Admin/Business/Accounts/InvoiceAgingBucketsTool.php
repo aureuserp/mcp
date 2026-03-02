@@ -14,4 +14,9 @@ class InvoiceAgingBucketsTool extends BusinessMetricTool
     {
         return 'invoice_aging_buckets';
     }
+
+    protected function pluginName(): string
+    {
+        return 'invoices';
+    }
 }

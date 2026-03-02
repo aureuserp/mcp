@@ -14,4 +14,9 @@ class PurchaseRequisitionQueueTool extends BusinessMetricTool
     {
         return 'purchase_requisition_queue';
     }
+
+    protected function pluginName(): string
+    {
+        return 'purchases';
+    }
 }

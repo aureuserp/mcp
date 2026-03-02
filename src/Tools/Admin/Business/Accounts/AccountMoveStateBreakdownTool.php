@@ -14,4 +14,9 @@ class AccountMoveStateBreakdownTool extends BusinessMetricTool
     {
         return 'account_move_state_breakdown';
     }
+
+    protected function pluginName(): string
+    {
+        return 'accounts';
+    }
 }

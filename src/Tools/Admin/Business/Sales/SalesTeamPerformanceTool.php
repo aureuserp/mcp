@@ -14,4 +14,9 @@ class SalesTeamPerformanceTool extends BusinessMetricTool
     {
         return 'sales_team_performance';
     }
+
+    protected function pluginName(): string
+    {
+        return 'sales';
+    }
 }

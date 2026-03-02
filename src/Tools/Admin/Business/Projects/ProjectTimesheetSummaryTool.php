@@ -14,4 +14,9 @@ class ProjectTimesheetSummaryTool extends BusinessMetricTool
     {
         return 'project_timesheet_summary';
     }
+
+    protected function pluginName(): string
+    {
+        return 'projects';
+    }
 }

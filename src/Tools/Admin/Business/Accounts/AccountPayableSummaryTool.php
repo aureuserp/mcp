@@ -14,4 +14,9 @@ class AccountPayableSummaryTool extends BusinessMetricTool
     {
         return 'account_payable_summary';
     }
+
+    protected function pluginName(): string
+    {
+        return 'accounts';
+    }
 }

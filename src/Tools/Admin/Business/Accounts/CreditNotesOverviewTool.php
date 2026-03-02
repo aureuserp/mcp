@@ -15,4 +15,9 @@ class CreditNotesOverviewTool extends BusinessMetricTool
     {
         return 'credit_notes_overview';
     }
+
+    protected function pluginName(): string
+    {
+        return 'invoices';
+    }
 }

@@ -9,6 +9,7 @@ use Laravel\Mcp\Server\Tool;
 use Laravel\Mcp\Server\Tools\Annotations\IsIdempotent;
 use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
 use Webkul\Mcp\Support\BusinessToolService;
+use Webkul\PluginManager\Package;
 
 #[IsReadOnly]
 #[IsIdempotent]
@@ -17,6 +18,22 @@ abstract class BusinessMetricTool extends Tool
     public function __construct(protected BusinessToolService $businessToolService) {}
 
     abstract protected function metric(): string;
+
+    protected function pluginName(): ?string
+    {
+        return null;
+    }
+
+    public function shouldRegister(Request $request): bool
+    {
+        $plugin = $this->pluginName();
+
+        if ($plugin === null) {
+            return true;
+        }
+
+        return Package::isPluginInstalled($plugin);
+    }
 
     public function handle(Request $request): Response
     {

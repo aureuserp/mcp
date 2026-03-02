@@ -14,4 +14,9 @@ class InventoryWarehouseKpisTool extends BusinessMetricTool
     {
         return 'inventory_warehouse_kpis';
     }
+
+    protected function pluginName(): string
+    {
+        return 'inventories';
+    }
 }
